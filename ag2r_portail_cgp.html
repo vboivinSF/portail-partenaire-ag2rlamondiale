@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Espace Partenaires CGP · AG2R LA MONDIALE (maquette)</title>
 <style>
   :root{
@@ -133,7 +134,7 @@
 <body>
 <div class="topbar"><div class="wrap">
   <div><span>Espace réservé aux professionnels</span><span>Ligne partenaires : 04 72 00 10 01</span></div>
-  <div><span>Aide</span><span>Mentions légales</span><span><a href="ag2r_login.html" onclick="sessionStorage.removeItem('ag2r_user')" style="color:#fff;font-weight:600">Déconnexion</a></span></div>
+  <div><span>Aide</span><span>Mentions légales</span><span><a href="index.html" onclick="sessionStorage.removeItem('ag2r_user')" style="color:#fff;font-weight:600">Déconnexion</a></span></div>
 </div></div>
 
 <header><div class="wrap head">
@@ -257,10 +258,10 @@
 </div></footer>
 
 <script>
-  // Session simulée (démo) : posée par ag2r_login.html
+  // Session simulée (démo) : posée par index.html
   const FLAVIE='flavie.durand@gmail.com';
   const email=sessionStorage.getItem('ag2r_user');
-  if(!email){location.replace('ag2r_login.html');}
+  if(!email){location.replace('index.html');}
   const isFlavie=(email||'').trim().toLowerCase()===FLAVIE;
   const USER=isFlavie?{first:'Flavie',cabinet:'Durand & Associés Patrimoine'}:{first:'',cabinet:''};
   const SVG=(a,b,extra)=>"url(\"data:image/svg+xml;utf8,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 380'><defs><linearGradient id='s' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='${a}'/><stop offset='1' stop-color='${b}'/></linearGradient></defs><rect width='720' height='380' fill='url(#s)'/>${extra}</svg>`)+"\")";
